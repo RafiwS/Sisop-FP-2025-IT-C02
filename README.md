@@ -49,8 +49,6 @@ Fungsi **`fork()`** adalah panggilan sistem yang digunakan untuk menduplikasi pr
 
 - **Tanenbaum (2014)** menjelaskan bahwa **`fork()`** menciptakan proses baru yang hampir identik dengan induknya. Proses baru ini ditempatkan dalam antrian siap untuk dijalankan dan diatur oleh kernel. Proses induk dan anak kemudian dapat berjalan secara bersamaan, tetapi dengan kontrol yang terpisah.
 
-   > *“The fork() system call creates a new process by duplicating the calling process. The child process is almost identical to the parent, except for some minor differences such as the process ID. The new process does not start execution immediately, but is placed on the ready queue to be scheduled by the kernel.”* (Tanenbaum, 2014, p. 313)
-
    **Kelebihan `fork()`**: 
    - Memungkinkan pembuatan proses baru yang hampir identik dengan induknya.
    - Memberikan kemampuan untuk menjalankan beberapa proses secara paralel.
@@ -64,8 +62,6 @@ Setelah **`fork()`** menciptakan proses anak, **`exec()`** digunakan untuk mengg
 
 - **Bach (1986)** mengemukakan bahwa **`exec()`** memungkinkan program baru dimuat ke dalam ruang alamat proses yang telah ada, menggantikan program yang sedang berjalan. Eksekusi kemudian dimulai dari program baru tersebut.
 
-   > *“The exec() system call replaces the current process image with a new program. The new program is loaded into the process’s memory space, effectively replacing the image of the original process. This is necessary for running new programs in an already running process.”* (Bach, 1986, p. 198)
-
    **Kelebihan `exec()`**:
    - Memungkinkan penggantian program dalam proses yang sama, sehingga lebih efisien daripada menciptakan proses baru dengan **`fork()`**.
    - Mengurangi pemborosan memori karena tidak ada duplikasi data proses.
@@ -77,8 +73,6 @@ Setelah **`fork()`** menciptakan proses anak, **`exec()`** digunakan untuk mengg
 Ketika **`fork()`** dan **`exec()`** digunakan bersama-sama, mereka menawarkan cara yang lebih efisien untuk membuat dan menjalankan proses baru. Dengan **`fork()`**, proses anak diciptakan, dan kemudian dengan **`exec()`**, proses tersebut menggantikan citra program yang ada dengan program yang baru.
 
 - **Silberschatz et al. (2018)** menjelaskan bahwa kombinasi **`fork()`** dan **`exec()`** adalah cara yang efisien untuk menjalankan program baru karena tidak memerlukan shell. Proses yang dihasilkan lebih cepat dan lebih hemat memori, karena tidak ada overhead untuk memulai shell.
-
-   > *“The fork() system call creates a new process by duplicating the calling process. The child process has a new process ID, and its execution is independent of the parent. The new process does not begin execution immediately but is placed on the ready queue to be scheduled by the kernel.”* (Silberschatz et al., 2018, p. 298)
 
    **Kelebihan gabungan `fork()` dan `exec()`**:
    - Memungkinkan eksekusi program baru tanpa membutuhkan shell tambahan.
@@ -93,8 +87,6 @@ Ketika **`fork()`** dan **`exec()`** digunakan bersama-sama, mereka menawarkan c
 Fungsi **`system()`** digunakan untuk mengeksekusi perintah dalam shell. Perbedaannya dengan **`fork()`** dan **`exec()`** adalah bahwa **`system()`** memulai shell terlebih dahulu untuk menjalankan perintah. Karena ini melibatkan pembuatan proses shell tambahan, **`system()`** membawa overhead yang lebih besar dibandingkan dengan penggunaan langsung **`fork()`** dan **`exec()`**.
 
 - **Tanenbaum (2014)** mengkritik penggunaan **`system()`** karena memerlukan pengelolaan shell yang mengarah pada overhead yang lebih besar dibandingkan dengan **`fork()`** dan **`exec()`**, yang tidak memerlukan shell untuk mengeksekusi perintah.
-
-   > *“The system() call executes a command in the shell, and it has the disadvantage of adding additional overhead due to the creation and management of the shell process. This can be inefficient compared to directly using fork() and exec(), which allow a program to replace itself without the need for a shell.”* (Tanenbaum, 2014, p. 318)
 
    **Kelebihan `system()`**:
    - Mudah digunakan dalam skrip untuk menjalankan perintah shell tanpa memerlukan kontrol proses yang lebih rumit.
