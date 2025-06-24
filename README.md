@@ -25,10 +25,6 @@ Muhammad Huda Rabbani | 5027241098
 
 Buat program dimana menerima input user untuk diproses dengan system dan fork+exec sekaligus, untuk diketahui perbedaan kecepatan eksekusi mereka.
 
-### Catatan
-
-> Insert catatan dari pengerjaan kalian... (contoh dibawah) // hapus line ini
-
 Struktur repository:
 ```
 .
