@@ -27,7 +27,7 @@ Buat program dimana menerima input user untuk diproses dengan system dan fork+ex
 
 ### Catatan
 
-> Insert catatan dari pengerjaan kalian... (contoh dibawah) // hapus line ini
+> 
 
 Struktur repository:
 ```
