@@ -116,15 +116,12 @@ Berdasarkan penjelasan Stallings, untuk aplikasi yang memerlukan pembuatan prose
 Kemudian, dalam buku Modern Operating Systems edisi ke-5 oleh Andrew S. Tanenbaum dan Herbert Bos, terdapat penjelasan mengenai perbandingan antara penggunaan system() dan kombinasi fork() + exec() dalam konteks pembuatan proses baru di sistem operasi berbasis Unix/Linux.([openlibrary.org][1])
 
 1. Fork dan Exec
-
 Tanenbaum menjelaskan bahwa dalam sistem Unix/Linux, untuk memulai program baru, proses induk biasanya membuat salinan dirinya sendiri menggunakan sistem panggilan fork(). Setelah itu, proses anak menggantikan dirinya dengan program baru menggunakan exec(). Proses ini memungkinkan pembuatan proses baru yang efisien dan terkontrol.
 
 2. Penggunaan System Call
-
 Fungsi system() adalah pembungkus dari fork() dan exec(). Ketika system() dipanggil, ia membuat proses anak, yang kemudian menjalankan shell untuk mengeksekusi perintah yang diberikan. Meskipun lebih mudah digunakan, pendekatan ini memiliki overhead tambahan karena melibatkan pembuatan shell baru.&#x20;
 
 3. Perbandingan Kinerja
-
 Tanenbaum menekankan bahwa setiap panggilan sistem memiliki overhead waktu karena peralihan dari konteks pengguna ke konteks kernel. Oleh karena itu, menghindari panggilan sistem dapat meningkatkan kinerja program dengan mengurangi overhead. Dalam konteks ini, penggunaan system() mungkin kurang efisien dibandingkan dengan langsung menggunakan fork() dan exec().
 
 ### Kesimpulan
