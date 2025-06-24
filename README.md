@@ -110,9 +110,6 @@ Fungsi system() adalah pembungkus dari fork() dan exec(). Ketika system() dipang
 3. Perbandingan Kinerja
 Stallings menekankan bahwa setiap panggilan sistem memiliki overhead waktu karena peralihan dari konteks pengguna ke konteks kernel. Oleh karena itu, menghindari panggilan sistem dapat meningkatkan kinerja program dengan mengurangi overhead. Dalam konteks ini, penggunaan system() mungkin kurang efisien dibandingkan dengan langsung menggunakan fork() dan exec().
 
-Kesimpulan
-Berdasarkan penjelasan Stallings, untuk aplikasi yang memerlukan pembuatan proses baru secara efisien, menggunakan kombinasi fork() dan exec() lebih disarankan dibandingkan dengan menggunakan system(). Pendekatan ini memberikan kontrol lebih besar dan mengurangi overhead, sehingga meningkatkan kinerja sistem secara keseluruhan.
-
 Kemudian, dalam buku Modern Operating Systems edisi ke-5 oleh Andrew S. Tanenbaum dan Herbert Bos, terdapat penjelasan mengenai perbandingan antara penggunaan system() dan kombinasi fork() + exec() dalam konteks pembuatan proses baru di sistem operasi berbasis Unix/Linux.([openlibrary.org][1])
 
 1. Fork dan Exec
@@ -126,7 +123,7 @@ Tanenbaum menekankan bahwa setiap panggilan sistem memiliki overhead waktu karen
 
 ### Kesimpulan
 
-Berdasarkan penjelasan Tanenbaum, untuk aplikasi yang memerlukan pembuatan proses baru secara efisien, menggunakan kombinasi fork() dan exec() lebih disarankan dibandingkan dengan menggunakan system(). Pendekatan ini memberikan kontrol lebih besar dan mengurangi overhead, sehingga meningkatkan kinerja sistem secara keseluruhan.
+Berdasarkan penjelasan Tanenbaum dan Stalling, untuk aplikasi yang memerlukan pembuatan proses baru secara efisien, menggunakan kombinasi fork() dan exec() lebih disarankan dibandingkan dengan menggunakan system(). Pendekatan ini memberikan kontrol lebih besar dan mengurangi overhead, sehingga meningkatkan kinerja sistem secara keseluruhan.
 
 **Video Menjalankan Program**
 
