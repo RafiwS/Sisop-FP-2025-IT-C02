@@ -97,7 +97,7 @@ Fungsi **`system()`** digunakan untuk mengeksekusi perintah dalam shell. Perbeda
    - Kurang efisien untuk aplikasi yang memerlukan eksekusi perintah yang lebih kompleks atau berulang.
 
 
-**Solusi**
+## **Solusi**
 
 Dalam buku Operating Systems: Internals and Design Principles edisi ke-9 oleh William Stallings, terdapat penjelasan mengenai perbandingan antara penggunaan fungsi system() dan kombinasi fork() + exec() dalam konteks pembuatan dan eksekusi proses baru di sistem operasi berbasis Unix/Linux.
 
