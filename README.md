@@ -115,7 +115,10 @@ Berdasarkan penjelasan Stallings, untuk aplikasi yang memerlukan pembuatan prose
 
 
 **Video Menjalankan Program**
-...
+
+[Akses Video dalam Assets](./assets/demo.mp4)
+
+https://github.com/user-attachments/assets/7a219285-50f5-4d12-af70-a84e1c55baab
 
 ## Daftar Pustaka
 
