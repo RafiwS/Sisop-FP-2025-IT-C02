@@ -118,7 +118,7 @@ Berdasarkan penjelasan Stallings, untuk aplikasi yang memerlukan pembuatan prose
 
 [Akses Video dalam Assets](./assets/demo.mp4)
 
-https://github.com/user-attachments/assets/7a219285-50f5-4d12-af70-a84e1c55baab
+https://github.com/user-attachments/assets/cdf44602-1e07-4c8b-a981-cafb20600226
 
 ## Daftar Pustaka
 
